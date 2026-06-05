@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Комплекс Вивиана – Вили и Студиа под Наем | Цигов Чарк</title>
+  <meta name="description" content="Комплекс Вивиана в Цигов Чарк – 7 вили и 3 студиа под наем. Открит басейн, джакузи, сауна, ресторант. От 26€/нощ. Резервации: +359 87 942 7486">
+  <meta property="og:title" content="Комплекс Вивиана – Вили и Студиа под Наем">
+  <meta property="og:description" content="Открийте вашата идеална почивка в Цигов Чарк. 7 вили и 3 студиа с басейн, джакузи, сауна и ресторант.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════ PRELOADER ═══════════ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">Вивиана</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+</div>
+
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Комплекс <span>Вивиана</span></a>
+    <div class="nav-links">
+      <a href="#about"      class="nav-link">За нас</a>
+      <a href="#amenities"  class="nav-link">Удобства</a>
+      <a href="rooms.html"  class="nav-link">Имоти</a>
+      <a href="#pricing"    class="nav-link">Цени</a>
+      <a href="#location"   class="nav-link">Локация</a>
+      <a href="tel:+359879427486" class="nav-cta">
+        <i class="fas fa-phone"></i> +359 87 942 7486
+      </a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about"     class="nav-mobile-link">За нас</a>
+    <a href="#amenities" class="nav-mobile-link">Удобства</a>
+    <a href="rooms.html" class="nav-mobile-link">Имоти</a>
+    <a href="#pricing"   class="nav-mobile-link">Цени</a>
+    <a href="#location"  class="nav-mobile-link">Локация</a>
+    <a href="tel:+359879427486" class="nav-mobile-cta">
+      <i class="fas fa-phone"></i> +359 87 942 7486
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="images/hero.jpg" alt="Комплекс Вивиана" class="hero-photo"
+         onerror="this.style.display='none'">
+  </div>
+  <div class="hero-overlay"></div>
+
+  <!-- Decorative lines -->
+  <div class="hero-line hero-line-left"></div>
+  <div class="hero-line hero-line-right"></div>
+
+  <div class="hero-3d" id="hero3d">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-map-marker-alt"></i> Цигов Чарк, България
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-line" id="heroTitleTop">Комплекс</span>
+        <span class="hero-title-line hero-title-gold" id="heroTitleGold">Вивиана</span>
+      </h1>
+      <div class="hero-title-underline"></div>
+      <p class="hero-subtitle">Вашето идеално място за почивка</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">7</span>
+          <span class="hero-stat-label">Вили</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-label">Студиа</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">26€</span>
+          <span class="hero-stat-label">от / нощ</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="tel:+359879427486" class="btn btn-gold">
+          <i class="fas fa-phone"></i> Резервирайте сега
+        </a>
+        <a href="rooms.html" class="btn btn-outline">Разгледайте имотите</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Превъртете</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section class="about-section section" id="about">
+  <div class="about-bg-glow"></div>
+  <div class="container about-grid">
+
+    <div class="about-text-col">
+      <div class="reveal-wrap">
+        <div class="section-tag reveal-item">За Комплекса</div>
+      </div>
+      <div class="reveal-wrap">
+        <h2 class="section-title reveal-item">Отдайте се на<br><em>истинска почивка</em></h2>
+      </div>
+      <div class="about-gold-line reveal-item"></div>
+      <p class="about-lead reveal-item">
+        Сред зелените хълмове на Родопите, в уютния Цигов Чарк, се разполага
+        Комплекс Вивиана — вашето идеално бягство от ежедневието.
+      </p>
+      <p class="about-body reveal-item">
+        Седем просторни вили и три романтични студиа, всяко изградено с внимание
+        към детайла. Откъснете се от суматохата, потопете се в чистия планински
+        въздух и открийте истинската почивка сред красотата на Родопите.
+      </p>
+      <ul class="about-points">
+        <li class="about-point reveal-item">
+          <i class="fas fa-circle-check"></i>
+          <span>Открит басейн, джакузи, масажорна вана и сауна</span>
+        </li>
+        <li class="about-point reveal-item">
+          <i class="fas fa-circle-check"></i>
+          <span>Ресторант с изискано меню (08:00 – 23:00)</span>
+        </li>
+        <li class="about-point reveal-item">
+          <i class="fas fa-circle-check"></i>
+          <span>Семейни вили и романтични студиа за двойки</span>
+        </li>
+        <li class="about-point reveal-item">
+          <i class="fas fa-circle-check"></i>
+          <span>Детска площадка и спокойна природна среда</span>
+        </li>
+      </ul>
+      <div class="reveal-item">
+        <a href="rooms.html" class="btn btn-gold">
+          Разгледайте всички имоти <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="about-visual-col">
+      <div class="about-visual" id="aboutVisual">
+        <div class="about-frame-large" style="background:linear-gradient(135deg,#0d2137,#1a4a2e)">
+          <div class="about-placeholder-text">
+            <i class="fas fa-camera"></i>
+            <span>Снимка на комплекса</span>
+          </div>
+        </div>
+        <div class="about-frame-small" style="background:linear-gradient(135deg,#1a2d4a,#0d3d5a)">
+          <div class="about-placeholder-text">
+            <i class="fas fa-camera"></i>
+          </div>
+        </div>
+        <div class="about-location-badge">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Цигов Чарк</strong>
+            <span>Родопи, България</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ STATS ═══════════ -->
+<div class="stats-band">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <span class="stat-num" data-count="7" data-suffix="">7</span>
+      <span class="stat-label">Вили</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-count="3" data-suffix="">3</span>
+      <span class="stat-label">Студиа</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-count="5" data-suffix="">5</span>
+      <span class="stat-label">СПА удобства</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-count="26" data-suffix="€">26€</span>
+      <span class="stat-label">от / нощ</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ AMENITIES ═══════════ -->
+<section class="section amenities-section" id="amenities">
+  <div class="amenities-bg-decor"></div>
+  <div class="container">
+    <div class="section-header">
+      <div class="reveal-wrap">
+        <div class="section-tag reveal-item">Удобства</div>
+      </div>
+      <div class="reveal-wrap">
+        <h2 class="section-title reveal-item">Всичко, което ви трябва</h2>
+      </div>
+      <div class="reveal-wrap">
+        <p class="section-subtitle reveal-item">Комплексът разполага с множество удобства за незабравима почивка</p>
+      </div>
+    </div>
+    <div class="amenities-grid" id="amenitiesGrid"></div>
+    <div class="restaurant-banner reveal-item">
+      <i class="fas fa-utensils restaurant-icon"></i>
+      <div>
+        <strong>Ресторант на място</strong>
+        <span>Работно време: 08:00 – 23:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROPERTIES HORIZONTAL SCROLL ═══════════ -->
+<section class="section-horizontal" id="section-horizontal">
+  <div class="section-horizontal-intro">
+    <div class="container">
+      <div class="section-horizontal-flex">
+        <div>
+          <div class="section-tag">Нашите Имоти</div>
+          <h2 class="section-title" id="horizTitle">7 вили &amp; 3 студиа</h2>
+        </div>
+        <a href="rooms.html" class="btn btn-gold">
+          Виж всички <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="props-wrapper">
+    <div class="props-track" id="propsTrack"></div>
+  </div>
+</section>
+
+<!-- ═══════════ PRICING ═══════════ -->
+<section class="section pricing-section" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="reveal-wrap"><div class="section-tag reveal-item">Цени</div></div>
+      <div class="reveal-wrap"><h2 class="section-title reveal-item">Прозрачни цени</h2></div>
+      <div class="reveal-wrap"><p class="section-subtitle reveal-item">Цената е на човек за нощувка. Всички имоти на една цена.</p></div>
+    </div>
+    <div class="pricing-cards">
+      <div class="pricing-card pricing-card-left">
+        <div class="pricing-icon"><i class="fas fa-moon"></i></div>
+        <div class="pricing-label">Нощувка</div>
+        <div class="pricing-price">
+          <span class="pricing-amount">26</span>
+          <span class="pricing-currency">€</span>
+        </div>
+        <div class="pricing-per">на човек / нощ</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Нощувка в избран имот</li>
+          <li><i class="fas fa-check"></i> Ползване на всички удобства</li>
+          <li><i class="fas fa-check"></i> Безплатен паркинг</li>
+          <li><i class="fas fa-check"></i> Безплатен Wi-Fi</li>
+        </ul>
+        <a href="tel:+359879427486" class="pricing-btn">Резервирай</a>
+      </div>
+
+      <div class="pricing-card pricing-card-featured pricing-card-right">
+        <div class="pricing-badge">Препоръчано</div>
+        <div class="pricing-icon"><i class="fas fa-sun"></i></div>
+        <div class="pricing-label">Нощувка + Закуска</div>
+        <div class="pricing-price">
+          <span class="pricing-amount">28</span>
+          <span class="pricing-currency">€</span>
+        </div>
+        <div class="pricing-per">на човек / нощ</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Нощувка в избран имот</li>
+          <li><i class="fas fa-check"></i> Ползване на всички удобства</li>
+          <li><i class="fas fa-check"></i> Безплатен паркинг</li>
+          <li><i class="fas fa-check"></i> Безплатен Wi-Fi</li>
+          <li><i class="fas fa-check"></i> Закуска всяка сутрин</li>
+          <li><i class="fas fa-check"></i> Ресторант 08:00 – 23:00</li>
+        </ul>
+        <a href="tel:+359879427486" class="pricing-btn pricing-btn-gold">Резервирай</a>
+      </div>
+    </div>
+    <p class="pricing-note reveal-item">
+      <i class="fas fa-info-circle"></i>
+      За резервации се обадете на
+      <a href="tel:+359879427486" class="pricing-phone">+359 87 942 7486</a>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ LOCATION ═══════════ -->
+<section class="section location-section" id="location">
+  <div class="container">
+    <div class="section-header">
+      <div class="reveal-wrap"><div class="section-tag reveal-item">Локация</div></div>
+      <div class="reveal-wrap"><h2 class="section-title reveal-item">Намерете ни</h2></div>
+      <div class="reveal-wrap"><p class="section-subtitle reveal-item">Цигов Чарк, Родопи – природа, тишина, незабравими изгледи</p></div>
+    </div>
+  </div>
+  <div class="map-wrapper" id="mapWrapper">
+    <iframe
+      src="https://maps.google.com/maps?q=41.9502449,24.1396083&z=16&output=embed&hl=bg"
+      width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Комплекс Вивиана – Цигов Чарк"></iframe>
+    <a href="https://maps.app.goo.gl/mWyyvTvRDH19euba6"
+       target="_blank" rel="noopener noreferrer" class="map-open-btn">
+      <i class="fas fa-map-marker-alt"></i> Отвори в Google Maps
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-particles" id="ctaParticles"></div>
+  <div class="container cta-inner">
+    <h2 class="cta-title">Готови за незабравима почивка?</h2>
+    <p class="cta-text">Резервациите стават само по телефона. Обадете ни се — ще намерим идеалния имот за вас.</p>
+    <a href="tel:+359879427486" class="btn btn-gold btn-large cta-phone-btn">
+        <i class="fas fa-phone"></i> +359 87 942 7486
+      </a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Комплекс Вивиана</div>
+      <p class="footer-tagline">Вашето идеално място за почивка</p>
+    </div>
+    <div class="footer-info">
+      <a href="https://maps.app.goo.gl/mWyyvTvRDH19euba6" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-map-marker-alt"></i> Цигов Чарк, България
+      </a>
+      <a href="tel:+359879427486">
+        <i class="fas fa-phone"></i> +359 87 942 7486
+      </a>
+    </div>
+    <div class="footer-copy">&copy; 2025 Комплекс Вивиана. Всички права запазени.</div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

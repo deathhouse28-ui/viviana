@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Имот – Комплекс Вивиана</title>
+  <meta name="description" content="Разгледайте имота в Комплекс Вивиана, Цигов Чарк. Резервации: +359 87 942 7486">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="prop-page">
+
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<nav class="nav nav-scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Комплекс <span>Вивиана</span></a>
+    <div class="nav-links">
+      <a href="index.html#properties" class="nav-link">Имоти</a>
+      <a href="index.html#amenities"  class="nav-link">Удобства</a>
+      <a href="index.html#pricing"    class="nav-link">Цени</a>
+      <a href="index.html#location"   class="nav-link">Локация</a>
+      <a href="tel:+359879427486" class="nav-cta">
+        <i class="fas fa-phone"></i> +359 87 942 7486
+      </a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html#properties" class="nav-mobile-link">Имоти</a>
+    <a href="index.html#amenities"  class="nav-mobile-link">Удобства</a>
+    <a href="index.html#pricing"    class="nav-mobile-link">Цени</a>
+    <a href="index.html#location"   class="nav-mobile-link">Локация</a>
+    <a href="tel:+359879427486" class="nav-mobile-cta">
+      <i class="fas fa-phone"></i> +359 87 942 7486
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════ GALLERY ═══════════ -->
+<div id="gallery" class="prop-gallery">
+  <div class="swiper prop-swiper">
+    <div class="swiper-wrapper" id="galleryInner"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<!-- ═══════════ PROPERTY HEADER ═══════════ -->
+<div class="prop-header container">
+  <a href="index.html#properties" class="prop-back">
+    <i class="fas fa-arrow-left"></i> Назад към всички имоти
+  </a>
+  <div class="prop-header-top">
+    <div>
+      <span class="prop-type-badge" id="propType">Вила</span>
+      <h1 class="prop-title" id="propName">Вила</h1>
+    </div>
+    <a href="tel:+359879427486" class="btn btn-gold">
+      <i class="fas fa-phone"></i> Резервирайте
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════ PROPERTY CONTENT ═══════════ -->
+<main class="prop-main container">
+
+  <!-- Left: details -->
+  <div class="prop-details">
+    <!-- Info grid -->
+    <div class="prop-info-card">
+      <div class="prop-info-item">
+        <i class="fas fa-users"></i>
+        <div>
+          <span class="prop-info-label">Капацитет</span>
+          <span class="prop-info-value"><strong id="propCapacity"></strong> човека</span>
+        </div>
+      </div>
+      <div class="prop-info-item">
+        <i class="fas fa-door-closed"></i>
+        <div>
+          <span class="prop-info-label">Спални</span>
+          <span class="prop-info-value"><strong id="propBedrooms"></strong> спални</span>
+        </div>
+      </div>
+      <div class="prop-info-item">
+        <i class="fas fa-bed"></i>
+        <div>
+          <span class="prop-info-label">Легла</span>
+          <span class="prop-info-value" id="propBeds"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="prop-section">
+      <h2 class="prop-section-title">За имота</h2>
+      <p class="prop-description" id="propDescription"></p>
+    </div>
+
+    <!-- Features -->
+    <div class="prop-section prop-features">
+      <h2 class="prop-section-title">Удобства</h2>
+      <ul class="prop-feature-list" id="propFeatures"></ul>
+    </div>
+
+  </div>
+
+  <!-- Right: booking sidebar -->
+  <aside class="prop-sidebar">
+    <div class="prop-booking-card">
+      <div class="prop-booking-price">
+        <span class="prop-booking-from">от</span>
+        <span class="prop-booking-amount">26€</span>
+        <span class="prop-booking-per">/ човек / нощ</span>
+      </div>
+      <div class="prop-booking-options">
+        <div class="prop-booking-option">
+          <span>Нощувка</span>
+          <strong>26€ / чов.</strong>
+        </div>
+        <div class="prop-booking-option">
+          <span>Нощувка + Закуска</span>
+          <strong>28€ / чов.</strong>
+        </div>
+      </div>
+      <a href="tel:+359879427486" class="btn btn-gold btn-full">
+        <i class="fas fa-phone"></i> Резервирайте сега
+      </a>
+      <p class="prop-booking-note">
+        <i class="fas fa-phone-alt"></i>
+        Резервациите стават само по телефона
+      </p>
+      <a href="tel:+359879427486" class="prop-booking-phone">+359 87 942 7486</a>
+    </div>
+
+    <div class="prop-location-mini">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+        <strong>Цигов Чарк, България</strong>
+        <a href="https://maps.app.goo.gl/mWyyvTvRDH19euba6" target="_blank" rel="noopener noreferrer">
+          Виж на картата <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+</main>
+
+<!-- ═══════════ COMPLEX AMENITIES EMBED ═══════════ -->
+<section class="prop-complex-section section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Комплексът предлага</div>
+      <h2 class="section-title">Удобства на Комплекс Вивиана</h2>
+      <p class="section-subtitle">Всеки наш гост получава пълен достъп до всички удобства на комплекса</p>
+    </div>
+    <div class="amenities-grid" id="propAmenitiesGrid"></div>
+    <div class="restaurant-banner prop-restaurant-banner">
+      <i class="fas fa-utensils restaurant-icon"></i>
+      <div>
+        <strong>Ресторант на място</strong>
+        <span>Работно време: 08:00 – 23:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ OTHER PROPERTIES ═══════════ -->
+<section class="prop-others section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Разгледайте и</div>
+      <h2 class="section-title">Другите ни имоти</h2>
+    </div>
+    <div class="prop-others-grid" id="othersGrid"></div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="index.html#properties" class="btn btn-outline">
+        Виж всички имоти <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Комплекс Вивиана</div>
+    </div>
+    <div class="footer-info">
+      <a href="https://maps.app.goo.gl/mWyyvTvRDH19euba6" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-map-marker-alt"></i> Цигов Чарк, България
+      </a>
+      <a href="tel:+359879427486">
+        <i class="fas fa-phone"></i> +359 87 942 7486
+      </a>
+    </div>
+    <div class="footer-copy">&copy; 2025 Комплекс Вивиана. Всички права запазени.</div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/property.js"></script>
+<script>
+  /* Build "other properties" grid */
+  const othersGrid = document.getElementById("othersGrid");
+  const others = COMPLEX.properties.filter(p => p.id !== propId).slice(0, 3);
+  others.forEach(p => {
+    const thumb = p.images.length
+      ? `<img src="${p.images[0]}" alt="${p.name}" class="prop-card-img" loading="lazy">`
+      : `<div class="prop-card-placeholder" style="background:${p.gradient}">
+           <i class="fas fa-camera prop-card-icon"></i>
+         </div>`;
+    othersGrid.innerHTML += `
+      <a href="property.html?id=${p.id}" class="prop-card">
+        <div class="prop-card-media">${thumb}</div>
+        <div class="prop-card-body">
+          <span class="prop-card-type">${p.type === "villa" ? "Вила" : "Студио"}</span>
+          <h3 class="prop-card-name">${p.name}</h3>
+          <div class="prop-card-footer">
+            <span class="prop-card-price">от <strong>26€</strong>/нощ</span>
+            <span class="prop-card-link">Виж <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>`;
+  });
+</script>
+</body>
+</html>
